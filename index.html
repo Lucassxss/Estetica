@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética Facial - Acne Vulgar</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/script/script.js" defer></script>
+</head>
+<body>
+    <!-- Página do formulário -->
+    <div id="form-page">
+        <section id="questionario" class="container">
+            <h2>Questionário sobre Cuidados com a Pele</h2>
+            <form id="skin-care-form">
+                <fieldset>
+                    <legend>Por favor, responda as perguntas abaixo para avaliar seus cuidados com a pele:</legend>
+                    
+                    <label for="cleaning-frequency">Com que frequência você limpa o seu rosto?</label><br>
+                    <input type="radio" id="daily" name="cleaning-frequency" value="daily">
+                    <label for="daily">Diariamente</label><br>
+                    <input type="radio" id="occasionally" name="cleaning-frequency" value="occasionally">
+                    <label for="occasionally">Ocasionalmente</label><br>
+                    <input type="radio" id="rarely" name="cleaning-frequency" value="rarely">
+                    <label for="rarely">Raramente</label><br>
+
+                    <label for="moisturizer">Você usa hidratante regularmente?</label><br>
+                    <input type="radio" id="yes" name="moisturizer" value="yes">
+                    <label for="yes">Sim</label><br>
+                    <input type="radio" id="no" name="moisturizer" value="no">
+                    <label for="no">Não</label><br>
+
+                    <label for="sunscreen">Você usa protetor solar diariamente?</label><br>
+                    <input type="radio" id="yes-sunscreen" name="sunscreen" value="yes">
+                    <label for="yes-sunscreen">Sim</label><br>
+                    <input type="radio" id="no-sunscreen" name="sunscreen" value="no">
+                    <label for="no-sunscreen">Não</label><br>
+
+                    <label for="makeup-removal">Você remove a maquiagem antes de dormir?</label><br>
+                    <input type="radio" id="yes-makeup" name="makeup-removal" value="yes">
+                    <label for="yes-makeup">Sim</label><br>
+                    <input type="radio" id="no-makeup" name="makeup-removal" value="no">
+                    <label for="no-makeup">Não</label><br>
+
+                    <label for="diet">Você mantém uma dieta balanceada e bebe bastante água?</label><br>
+                    <input type="radio" id="healthy-diet" name="diet" value="healthy-diet">
+                    <label for="healthy-diet">Sim</label><br>
+                    <input type="radio" id="unhealthy-diet" name="diet" value="unhealthy-diet">
+                    <label for="unhealthy-diet">Não</label><br>
+
+                    <label for="skin-care-products">Você usa produtos de cuidados com a pele recomendados por um dermatologista?</label><br>
+                    <input type="radio" id="yes-products" name="skin-care-products" value="yes">
+                    <label for="yes-products">Sim</label><br>
+                    <input type="radio" id="no-products" name="skin-care-products" value="no">
+                    <label for="no-products">Não</label><br>
+
+                    <label for="physical-exercise">Você pratica exercícios físicos regularmente?</label><br>
+                    <input type="radio" id="yes-exercise" name="physical-exercise" value="yes">
+                    <label for="yes-exercise">Sim</label><br>
+                    <input type="radio" id="no-exercise" name="physical-exercise" value="no">
+                    <label for="no-exercise">Não</label><br>
+
+                    <label for="stress">Você gerencia o estresse adequadamente?</label><br>
+                    <input type="radio" id="yes-stress" name="stress" value="yes">
+                    <label for="yes-stress">Sim</label><br>
+                    <input type="radio" id="no-stress" name="stress" value="no">
+                    <label for="no-stress">Não</label><br>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+            <div id="feedback" class="feedback"></div>
+            <button id="go-to-site-btn">Ir para o site</button>
+        </section>
+    </div>
+
+    <!-- Página do site -->
+    <div id="site-page" style="display: none;">
+        <header>
+            <h1>Estética Facial</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#acne">Acne Vulgar</a></li>
+                    <li><a href="#tratamentos">Tratamentos</a></li>
+                    <li><a href="#cuidados">Cuidados</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="container">
+            <h2>Bem-vindo à Estética Facial</h2>
+            <p>Aqui você encontra as melhores informações e tratamentos para a saúde da sua pele.</p>
+        </section>
+
+        <section id="acne" class="container">
+            <h2>Graus de Acne Vulgar</h2>
+            <div class="grade" id="grade-1">
+                <h3>Grau 1 - Acne Leve</h3>
+                <p>O grau 1 é caracterizado por comedões (cravos) e algumas espinhas pequenas. Normalmente, não há inflamação significativa.</p>
+            </div>
+            <div class="grade" id="grade-2" style="display: none;">
+                <h3>Grau 2 - Acne Moderada</h3>
+                <p>O grau 2 apresenta comedões e espinhas inflamadas, com vermelhidão e sensibilidade. Pode haver pequenas pápulas e pústulas.</p>
+            </div>
+            <div class="grade" id="grade-3" style="display: none;">
+                <h3>Grau 3 - Acne Severa</h3>
+                <p>O grau 3 é caracterizado por acne inflamatória significativa, com pápulas, pústulas e nódulos. A pele pode estar muito inflamada e dolorida.</p>
+            </div>
+            <div class="grade" id="grade-4" style="display: none;">
+                <h3>Grau 4 - Acne Muito Severa</h3>
+                <p>O grau 4 apresenta acne cística e nodular, com formação de cistos dolorosos e frequentemente cicatrizes. A acne é extensa e grave.</p>
+            </div>
+            <button class="toggle-btn" data-target="grade-1">Mostrar Grau 1</button>
+            <button class="toggle-btn" data-target="grade-2">Mostrar Grau 2</button>
+            <button class="toggle-btn" data-target="grade-3">Mostrar Grau 3</button>
+            <button class="toggle-btn" data-target="grade-4">Mostrar Grau 4</button>
+        </section>
+
+        <section id="tratamentos" class="container">
+            <h2>Tratamentos para Acne</h2>
+            <p>Existem várias opções de tratamento para a acne, incluindo:</p>
+            <ul>
+                <li><strong>Tratamentos tópicos:</strong> Cremes e géis aplicados diretamente na pele para reduzir a inflamação e combater as bactérias.</li>
+                <li><strong>Tratamentos orais:</strong> Medicamentos tomados por via oral para tratar casos mais graves de acne.</li>
+                <li><strong>Procedimentos dermatológicos:</strong> Terapias como peelings químicos, laser e terapia com luz.</li>
+            </ul>
+        </section>
+
+        <section id="cuidados" class="container">
+            <h2>Cuidados com a Pele</h2>
+            <p>Para manter uma pele saudável e prevenir a acne, considere as seguintes práticas:</p>
+            <ul>
+                <li>Limpeza regular do rosto com produtos apropriados para o seu tipo de pele.</li>
+                <li>Uso de hidratantes para manter a pele bem hidratada.</li>
+                <li>Aplicação de protetor solar para proteger a pele dos danos causados pelos raios UV.</li>
+                <li>Remoção completa da maquiagem antes de dormir.</li>
+                <li>Manutenção de uma dieta equilibrada e hidratação adequada.</li>
+                <li>Consulta com um dermatologista para recomendações personalizadas.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Estética Facial. Todos os direitos reservados.</p>
+            <a href="#" id="back-to-form-btn">Voltar ao Formulário</a>
+        </footer>
+    </div>
+</body>
+</html>

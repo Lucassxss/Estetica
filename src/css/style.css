@@ -1,0 +1,216 @@
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #ffe6f2;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #cc0052;
+    text-align: center;
+}
+
+nav {
+    background-color: #ffe6f2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #e6b3cc;
+    border-radius: 5px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #cc0052;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+#more-info,
+#grau1-info,
+#grau2-info,
+#grau3-info,
+#grau4-info {
+    margin-top: 10px;
+    background-color: #fff0f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do questionário */
+#questionario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#questionario label {
+    font-weight: bold;
+}
+
+#questionario input,
+#questionario select,
+#questionario textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#questionario button {
+    background-color: #cc0052;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#questionario button:hover {
+    background-color: #b30045;
+}
+
+/* Estilo responsivo para telas pequenas (Mobile) */
+@media (max-width: 767px) {
+    header,
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    /* Correção para esconder elementos apenas quando necessário */
+    #more-info, 
+    #grau1-info, 
+    #grau2-info, 
+    #grau3-info, 
+    #grau4-info {
+        display: block;
+    }
+}
+
+/* Estilo para telas maiores (Desktop) */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
