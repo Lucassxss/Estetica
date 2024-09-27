@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const goToSiteBtn = document.getElementById('go-to-site-btn');
     const backToFormBtn = document.getElementById('back-to-form-btn');
 
+    // Exibe ou oculta os detalhes sobre graus de acne
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
             const targetId = button.getAttribute('data-target');
@@ -20,12 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Lógica de submissão do formulário
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         let score = 0;
         const formData = new FormData(form);
 
+        // Avalia as respostas e atribui pontuação
         for (const [name, value] of formData.entries()) {
             switch (name) {
                 case 'cleaning-frequency':
@@ -41,15 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (value === 'yes') score += 2;
                     break;
                 case 'diet':
-                    if (value === 'healthy-diet') score += 2;
+                    if (value === 'alimentacao' || value === 'alimentação') score += 2;
                     break;
                 case 'skin-care-products':
                     if (value === 'yes') score += 2;
                     break;
                 case 'physical-exercise':
-                    if (value === 'yes') score += 2;
+                    if (value === 'no') score += 2;  // Resposta 'não' é mais benéfica aqui
                     break;
-                case 'stress':
+                case 'stress':  // Tratamento para acne
                     if (value === 'no') score += 2;
                     break;
                 default:
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // Define a mensagem de feedback com base na pontuação
         let message;
         if (score >= 16) {
             message = 'Parabéns! Você parece estar cuidando bem da sua pele.';
@@ -69,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         feedback.textContent = message;
     });
 
+    // Navegação entre o formulário e o site principal
     goToSiteBtn.addEventListener('click', function () {
         formPage.style.display = 'none';
         sitePage.style.display = 'block';
