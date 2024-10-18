@@ -124,6 +124,16 @@ button:hover {
     background-color: #b30045;
 }
 
+/* Estilo para imagens dos graus de acne */
+.acne-image {
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px 0;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
 /* Estilo responsivo para telas pequenas (Mobile) */
 @media (max-width: 767px) {
     header,
@@ -179,6 +189,10 @@ button:hover {
     #grau4-info {
         display: block;
     }
+
+    .acne-image {
+        max-width: 100%; /* Garante que a imagem ocupe toda a largura no mobile */
+    }
 }
 
 /* Estilo para telas maiores (Desktop) */
@@ -212,5 +226,9 @@ button:hover {
 
     h3 {
         font-size: 22px;
+    }
+
+    .acne-image {
+        max-width: 400px; /* Limita o tamanho da imagem em telas grandes */
     }
 }
