@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética Facial - Acne Vulgar</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/script/script.js" defer></script>
+</head>
+<body>
+    <!-- Página do formulário -->
+    <div id="form-page">
+        <section id="questionario" class="container">
+            <h2>Questionário sobre Cuidados com a Pele</h2>
+            <form id="skin-care-form">
+                <fieldset>
+                    <legend>Por favor, responda as perguntas abaixo para avaliar seus cuidados com a pele:</legend>
+                    
+                    <label for="cleaning-frequency">Com que frequência você higieniza o seu rosto?</label><br>
+                    <input type="radio" id="daily" name="cleaning-frequency" value="daily">
+                    <label for="daily">Diariamente</label><br>
+                    <input type="radio" id="occasionally" name="cleaning-frequency" value="occasionally">
+                    <label for="occasionally">Ocasionalmente</label><br>
+                    <input type="radio" id="rarely" name="cleaning-frequency" value="rarely">
+                    <label for="rarely">Raramente</label><br>
+
+                    <label for="moisturizer">Você usa hidratante regularmente?</label><br>
+                    <input type="radio" id="moisturizer-yes" name="moisturizer" value="yes">
+                    <label for="moisturizer-yes">Sim</label><br>
+                    <input type="radio" id="moisturizer-no" name="moisturizer" value="no">
+                    <label for="moisturizer-no">Não</label><br>
+
+                    <label for="sunscreen">Você usa protetor solar diariamente?</label><br>
+                    <input type="radio" id="sunscreen-yes" name="sunscreen" value="yes">
+                    <label for="sunscreen-yes">Sim</label><br>
+                    <input type="radio" id="sunscreen-no" name="sunscreen" value="no">
+                    <label for="sunscreen-no">Não</label><br>
+
+                    <label for="makeup-removal">Você remove a maquiagem antes de dormir?</label><br>
+                    <input type="radio" id="makeup-removal-yes" name="makeup-removal" value="yes">
+                    <label for="makeup-removal-yes">Sim</label><br>
+                    <input type="radio" id="makeup-removal-no" name="makeup-removal" value="no">
+                    <label for="makeup-removal-no">Não</label><br>
+
+                    <label for="diet">Você tem uma alimentação balanceada e ingere bastante água?</label><br>
+                    <input type="radio" id="diet-yes" name="diet" value="yes">
+                    <label for="diet-yes">Sim</label><br>
+                    <input type="radio" id="diet-no" name="diet" value="no">
+                    <label for="diet-no">Não</label><br>
+
+                    <label for="skin-care-products">Você usa produtos específicos para seu tipo de pele?</label><br>
+                    <input type="radio" id="skin-care-products-yes" name="skin-care-products" value="yes">
+                    <label for="skin-care-products-yes">Sim</label><br>
+                    <input type="radio" id="skin-care-products-no" name="skin-care-products" value="no">
+                    <label for="skin-care-products-no">Não</label><br>
+
+                    <label for="physical-exercise">Você costuma "espremer" ou "cutucar" suas acnes?</label><br>
+                    <input type="radio" id="physical-exercise-yes" name="physical-exercise" value="yes">
+                    <label for="physical-exercise-yes">Sim</label><br>
+                    <input type="radio" id="physical-exercise-no" name="physical-exercise" value="no">
+                    <label for="physical-exercise-no">Não</label><br>
+
+                    <label for="acne-treatment">Você já fez algum tratamento para acne?</label><br>
+                    <input type="radio" id="acne-treatment-yes" name="acne-treatment" value="yes">
+                    <label for="acne-treatment-yes">Sim</label><br>
+                    <input type="radio" id="acne-treatment-no" name="acne-treatment" value="no">
+                    <label for="acne-treatment-no">Não</label><br>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+            <div id="feedback" class="feedback"></div>
+            <button id="go-to-site-btn">Ir para o site</button>
+        </section>
+    </div>
+
+    <!-- Página do site -->
+    <div id="site-page" style="display: none;">
+        <header>
+            <h1>Estética Facial</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#acne">Acne</a></li>
+                    <li><a href="#acne">Acne Vulgar</a></li>
+                    <li><a href="#cuidados">Cuidados</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="container">
+            <h2>Bem-vindo à Estética Facial</h2>
+            <p>Aqui você encontra as melhores informações para a saúde da sua pele acneica.</p>
+        </section>
+
+        <section id="tratamentos" class="container">
+            <h2>O que é Acne</h2>
+            <p>A acne é uma condição dermatológica caracterizada pela obstrução dos folículos pilosos (poros) devido à produção excessiva de sebo, acúmulo de células mortas e presença de microrganismos. Essa obstrução resulta em inflamações que podem manifestar-se na forma de comedões (cravos), pápulas, pústulas, cistos e nódulos.</p>
+        </section>
+
+        <section id="acne" class="container">
+            <h2>Graus de Acne Vulgar</h2>
+            <div class="grade" id="grade-1">
+                <h3>Grau 1 - Acne Comedogênica</h3>
+                <p>A acne grau 1, também conhecida como acne leve, é caracterizada pela presença de comedões abertos (cravos pretos) e comedões fechados (cravos brancos), sem inflamação significativa.</p>
+            </div>
+            <div class="grade" id="grade-2" style="display: none;">
+                <h3>Grau 2 - Acne Papulosa</h3>
+                <p>A acne grau 2 é classificada como acne leve a moderada, nesta fase há inflamação. É caracterizada pela presença de comedões, pápulas (lesões elevadas, vermelhas) e pústulas (pápulas com pus).</p>
+            </div>
+            <div class="grade" id="grade-3" style="display: none;">
+                <h3>Grau 3 - Acne Nodular</h3>
+                <p>A acne grau 3 é considerada moderada a grave e apresenta um aumento significativo na inflamação e na quantidade de lesões. É caracterizada pela presença de comedões, pápulas, pústulas e podem surgir nódulos (lesões mais profundas e sólidas).</p>
+            </div>
+            <div class="grade" id="grade-4" style="display: none;">
+                <h3>Grau 4 - Acne Conglobata</h3>
+                <p>A acne grau 4 é considerada grave e é caracterizada por uma inflamação extensa e a presença de várias lesões. É caracterizada pela presença de comedões, pápulas, pústulas, nódulos e cistos (lesões grandes cheias de pus).</p>
+            </div>
+            <button class="toggle-btn" data-target="grade-1">Mostrar Grau 1</button>
+            <button class="toggle-btn" data-target="grade-2">Mostrar Grau 2</button>
+            <button class="toggle-btn" data-target="grade-3">Mostrar Grau 3</button>
+            <button class="toggle-btn" data-target="grade-4">Mostrar Grau 4</button>
+        </section>
+
+        <section id="cuidados" class="container">
+            <h2>Cuidados com a Pele</h2>
+            <p>Para manter uma pele saudável e prevenir a acne, considere as seguintes práticas:</p>
+            <ul>
+                <li>Limpeza regular do rosto com produtos apropriados para o seu tipo de pele.</li>
+                <li>Uso de hidratantes para manter a pele bem hidratada.</li>
+                <li
